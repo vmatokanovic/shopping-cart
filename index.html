@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/logo_green.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Inchoo | Shopping Cart</title>
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header-top">
+      <nav class="nav top-bar container">
+        <ul class="top-bar__links">
+          <li class="nav__item">Contact our Customer Service</li>
+          <li class="nav__item">
+            <img src="img/phone-icon.png" height="16" />
+            <p><b>(800) 333-3567</b></p>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link-top-bar" href="#">About us</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link-top-bar" href="#">Contact us</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link-top-bar" href="#">Where to buy</a>
+          </li>
+        </ul>
+        <div class="promo-msg">
+          Promo message area - shipping advantages, special offers...
+        </div>
+        <div class="sign-in__btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="16"
+            viewBox="0 0 12 16"
+            fill="none"
+          >
+            <path
+              class="user-icon"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.941176 4.70588C0.941176 2.10635 3.04565 0 5.64706 0C8.24847 0 10.3529 2.10635 10.3529 4.70588C10.3529 7.30541 8.24847 9.41177 5.64706 9.41177C3.04565 9.41177 0.941176 7.30541 0.941176 4.70588ZM8.47059 4.70588C8.47059 3.14918 7.20376 1.88235 5.64706 1.88235C4.09035 1.88235 2.82353 3.14918 2.82353 4.70588C2.82353 6.26259 4.09035 7.52941 5.64706 7.52941C7.20376 7.52941 8.47059 6.26259 8.47059 4.70588ZM5.64706 12.2353C7.54918 12.2353 8.75388 12.9609 9.20753 13.5953C8.56471 13.84 7.35435 14.1176 5.64706 14.1176C3.77976 14.1176 2.62965 13.8306 2.05365 13.6075C2.48565 12.9346 3.72612 12.2353 5.64706 12.2353ZM0 14.1176C0 12.2353 2.11765 10.3529 5.64706 10.3529C9.07859 10.3529 11.2941 12.2353 11.2941 14.1176C11.2941 15.0588 8.95812 16 5.64706 16C2.11765 16 0 15.0588 0 14.1176Z"
+              fill="#F5F5F5"
+            />
+          </svg>
+          <a href="#">Sign in</a>
+        </div>
+      </nav>
+    </header>
+    <header class="header-bottom">
+      <nav class="nav bottom-bar container">
+        <div class="logo-container">
+          <button>
+            <img
+              class="hamburger"
+              src="img/menu-icon.png"
+              alt="Hamburger menu icon"
+            />
+          </button>
+
+          <img class="logo" src="img/logo_green.png" alt="Inchoo logo" />
+        </div>
+        <ul class="bottom-bar__links">
+          <li>
+            <img src="img/line-orange.png" alt="Orange line" />
+            <a class="nav__link" href="#"
+              >Soft top <br />
+              products</a
+            >
+          </li>
+          <li>
+            <img src="img/line-black.png" alt="Orange line" />
+            <a class="nav__link" href="#"
+              >Jeep <br />
+              accessories</a
+            >
+          </li>
+        </ul>
+        <div class="search-cart__container">
+          <div class="search__input">
+            <input placeholder="Search entire store here..." />
+            <img src="img/search-icon.png" alt="Search icon" height="16" />
+          </div>
+
+          <button class="my-cart__btn">
+            <img
+              src="img/shopping-cart-icon.png"
+              alt="Search icon"
+              height="16"
+            />My cart
+            <img src="img/arrow-icon.png" alt="Search icon" height="8" />
+            <span class="products-number__el">2</span>
+          </button>
+
+          <button class="search-mobile__btn">
+            <img
+              alt="Search icon"
+              src="img/search-icon-white.png"
+              height="16"
+            />
+          </button>
+
+          <button class="my-cart-mobile__btn">
+            <img
+              src="img/shopping-cart-icon.png"
+              alt="Search icon"
+              height="16"
+            />
+            <span class="products-number__el">2</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="section section--shopping-cart">
+      <h1>SHOPPING CART</h1>
+      <div class="cart-container">
+        <div class="products__table">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>SUBTOTAL</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="item-info">
+                  <td class="description-cell">
+                    <div class="description-container">
+                      <img
+                        src="img/product-img.png"
+                        alt="Search icon"
+                        width="294"
+                      />
+                      <div class="product-description__container">
+                        <p class="product-description">
+                          Flip Top™ Complete Replacement Soft Top, Jeep
+                          1976-1995 CJ-7/Wrangler, No doors included, Clear side
+                          and rear windows
+                        </p>
+                        <p class="product-color"><b>Color:</b> Black Denim</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="mobile-th">Qty</span>
+                    <input class="qty__input" type="number" value="1" />
+                  </td>
+                  <td class="product-subtotal">
+                    <span class="mobile-th">SUBTOTAL</span> <span>$150.00</span>
+                  </td>
+                  <td>
+                    <div class="action-icons__container">
+                      <button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M15.6303 3.62326L13.2059 1.22088C12.9592 0.976383 12.6358 0.854553 12.3124 0.854553C11.9882 0.854553 11.6657 0.976383 11.4189 1.22088L8.42105 4.19235H0.842105C0.377263 4.19235 0 4.56535 0 5.0268V15.8746C0 16.3361 0.377263 16.7091 0.842105 16.7091H11.7895C12.2543 16.7091 12.6316 16.3361 12.6316 15.8746V8.3646L15.6303 5.39313C15.8771 5.14863 16 4.8282 16 4.50777C16 4.18735 15.8771 3.86775 15.6303 3.62326ZM7.15791 11.4287L5.32886 9.61627L10.6282 4.36508L12.4573 6.17751L7.15791 11.4287ZM6.47998 11.7533L5.00128 10.3114L5.05265 11.7024L6.47998 11.7533ZM10.9474 15.0402H1.6842V5.86125H6.73685L4.05895 8.5148C3.81221 8.7593 3.65642 9.19237 3.52926 9.59041C3.39452 10.0076 3.36842 10.4716 3.36842 10.817V13.3713H5.94611C6.29474 13.3713 6.87917 13.2879 7.26906 13.1293L7.3786 13.0852C7.72723 12.9451 8.04673 12.8167 8.26949 12.5953L10.9474 10.0335V15.0402ZM11.2236 3.77513L13.0526 5.58755L14.1406 4.50861L12.3124 2.69618L11.2236 3.77513Z"
+                            fill="#2F2F2F"
+                          />
+                        </svg>
+                      </button>
+                      <button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 0.854553C3.58844 0.854553 0 4.41126 0 8.78183C0 13.1524 3.58844 16.7091 8 16.7091C12.4116 16.7091 16 13.1524 16 8.78183C16 4.41126 12.4116 0.854553 8 0.854553ZM8 14.9475C4.56977 14.9475 1.77777 12.1817 1.77777 8.78183C1.77777 5.38191 4.56977 2.61617 8 2.61617C11.4302 2.61617 14.2222 5.38191 14.2222 8.78183C14.2222 12.1817 11.4302 14.9475 8 14.9475ZM10.9804 6.45121L8.62843 8.78183L10.9813 11.1133C11.1538 11.2851 11.1538 11.5652 10.9813 11.7361C10.8942 11.8215 10.7804 11.8647 10.6667 11.8647C10.5529 11.8647 10.4391 11.8215 10.352 11.7352L7.99998 9.40456L5.64797 11.7361C5.56086 11.8215 5.44708 11.8647 5.33331 11.8647C5.21953 11.8647 5.10575 11.8215 5.01953 11.7352C4.84619 11.5643 4.84619 11.2842 5.01953 11.1124L7.37153 8.78183L5.01953 6.45033C4.84619 6.27945 4.84619 5.99935 5.01953 5.8276C5.19197 5.65672 5.47464 5.65672 5.64797 5.8276L7.99998 8.15909L10.352 5.82848C10.5244 5.6576 10.8071 5.6576 10.9804 5.82848C11.1529 6.00023 11.1529 6.28033 10.9804 6.45121Z"
+                            fill="#2F2F2F"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr class="item-info">
+                  <td class="description-cell">
+                    <div class="description-container">
+                      <img
+                        src="img/product-img.png"
+                        alt="Search icon"
+                        width="294"
+                      />
+                      <div class="product-description__container">
+                        <p class="product-description">
+                          Flip Top™ Complete Replacement Soft Top, Jeep
+                          1976-1995 CJ-7/Wrangler, No doors included, Clear side
+                          and rear windows
+                        </p>
+                        <p class="product-color">
+                          <b>Color:</b> Black Denim, MATT
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="mobile-th">Qty</span>
+                    <input class="qty__input" type="number" value="1" />
+                  </td>
+                  <td class="product-subtotal">
+                    <span class="mobile-th">SUBTOTAL</span> <span>$250.00</span>
+                  </td>
+
+                  <td>
+                    <div class="action-icons__container">
+                      <button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M15.6303 3.62326L13.2059 1.22088C12.9592 0.976383 12.6358 0.854553 12.3124 0.854553C11.9882 0.854553 11.6657 0.976383 11.4189 1.22088L8.42105 4.19235H0.842105C0.377263 4.19235 0 4.56535 0 5.0268V15.8746C0 16.3361 0.377263 16.7091 0.842105 16.7091H11.7895C12.2543 16.7091 12.6316 16.3361 12.6316 15.8746V8.3646L15.6303 5.39313C15.8771 5.14863 16 4.8282 16 4.50777C16 4.18735 15.8771 3.86775 15.6303 3.62326ZM7.15791 11.4287L5.32886 9.61627L10.6282 4.36508L12.4573 6.17751L7.15791 11.4287ZM6.47998 11.7533L5.00128 10.3114L5.05265 11.7024L6.47998 11.7533ZM10.9474 15.0402H1.6842V5.86125H6.73685L4.05895 8.5148C3.81221 8.7593 3.65642 9.19237 3.52926 9.59041C3.39452 10.0076 3.36842 10.4716 3.36842 10.817V13.3713H5.94611C6.29474 13.3713 6.87917 13.2879 7.26906 13.1293L7.3786 13.0852C7.72723 12.9451 8.04673 12.8167 8.26949 12.5953L10.9474 10.0335V15.0402ZM11.2236 3.77513L13.0526 5.58755L14.1406 4.50861L12.3124 2.69618L11.2236 3.77513Z"
+                            fill="#2F2F2F"
+                          />
+                        </svg>
+                      </button>
+                      <button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="17"
+                          viewBox="0 0 16 17"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 0.854553C3.58844 0.854553 0 4.41126 0 8.78183C0 13.1524 3.58844 16.7091 8 16.7091C12.4116 16.7091 16 13.1524 16 8.78183C16 4.41126 12.4116 0.854553 8 0.854553ZM8 14.9475C4.56977 14.9475 1.77777 12.1817 1.77777 8.78183C1.77777 5.38191 4.56977 2.61617 8 2.61617C11.4302 2.61617 14.2222 5.38191 14.2222 8.78183C14.2222 12.1817 11.4302 14.9475 8 14.9475ZM10.9804 6.45121L8.62843 8.78183L10.9813 11.1133C11.1538 11.2851 11.1538 11.5652 10.9813 11.7361C10.8942 11.8215 10.7804 11.8647 10.6667 11.8647C10.5529 11.8647 10.4391 11.8215 10.352 11.7352L7.99998 9.40456L5.64797 11.7361C5.56086 11.8215 5.44708 11.8647 5.33331 11.8647C5.21953 11.8647 5.10575 11.8215 5.01953 11.7352C4.84619 11.5643 4.84619 11.2842 5.01953 11.1124L7.37153 8.78183L5.01953 6.45033C4.84619 6.27945 4.84619 5.99935 5.01953 5.8276C5.19197 5.65672 5.47464 5.65672 5.64797 5.8276L7.99998 8.15909L10.352 5.82848C10.5244 5.6576 10.8071 5.6576 10.9804 5.82848C11.1529 6.00023 11.1529 6.28033 10.9804 6.45121Z"
+                            fill="#2F2F2F"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="discount__container">
+            <div class="discount-input">
+              <input placeholder="Enter Discount Code" /><button>apply</button>
+            </div>
+            <button class="update-discount__btn">update shopping cart</button>
+          </div>
+        </div>
+
+        <div class="summary__container">
+          <h2 class="summary-heading">SUMMARY</h2>
+          <div class="summary-price__container">
+            <div class="summary-item tab-shipping-and-tax">
+              <h3 class="h3-estimate-shipping-tax">
+                ESTIMATE SHIPPING AND TAX
+              </h3>
+              <button class="btn--toggle-form">
+                <img
+                  class="plus-icon"
+                  src="img/plus-icon.png"
+                  alt="Plus icon"
+                  width="16"
+                  height="16"
+                />
+              </button>
+            </div>
+            <div class="shipping-tax__form hidden">
+              <div class="form-input">
+                <label>Country</label>
+                <select id="countries" name="countries"></select>
+              </div>
+              <div class="form-input">
+                <label>State/Province</label>
+                <input type="text" />
+              </div>
+              <div class="form-input">
+                <label>Zip/Postal Code</label>
+                <input type="number" />
+              </div>
+              <div class="form-input">
+                <label>Flat Rate</label>
+                <div class="form-radio">
+                  <input
+                    type="radio"
+                    id="fixed"
+                    name="drone"
+                    value="fixed"
+                    checked
+                  />
+                  <label for="fixed">Fixed <span>($5.00)</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="summary-item multiple-items">
+              <div class="summary-subitem">
+                <h3>SUBTOTAL</h3>
+                <p class="summary-price">$150.00</p>
+              </div>
+              <div class="summary-subitem">
+                <h3>SHIPPING (Flat Rate - Fixed)</h3>
+                <p class="summary-price">$5.00</p>
+              </div>
+            </div>
+            <div class="summary-item multiple-items">
+              <div class="summary-subitem">
+                <h3>ORDER TOTAL</h3>
+                <p class="summary-price"><b>$155.00</b></p>
+              </div>
+              <button class="checkout__btn">PROCEED TO CHECKOUT</button>
+              <a>CHECKOUT WITH MULTIPLE ADDRESSES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <p class="copyright-text">
+          © Jeep is a registered trademark of FCA US LLC.
+        </p>
+        <li class="footer__item">
+          <a class="footer__link" href="#">About us</a>
+        </li>
+        <li class="footer__item line">
+          <img src="img/white-line.png" height="21" />
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Contact us</a>
+        </li>
+        <li class="footer__item line">
+          <img src="img/white-line.png" height="21" />
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Search terms</a>
+        </li>
+        <li class="footer__item line">
+          <img src="img/white-line.png" height="21" />
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Privacy and Cookie Policy</a>
+        </li>
+        <li class="footer__item line">
+          <img src="img/white-line.png" height="21" />
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Installation Videos</a>
+        </li>
+      </ul>
+      <div class="footer__copyright">
+        Contact our Customer Service&nbsp
+        <div class="call-link">
+          <img src="img/phone-icon.png" height="16" /><b>(800) 333-3567</b>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
